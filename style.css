@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    transition: all 0.2s ease;
+}
+
+:root {
+    --dark: #000011;
+    --light: #F5F5FF;
+    --accent1: #1E90FF;
+    --accent2: #32CD32;
+}
+
+.logo {
+    color: var(--light);
+    font-size: 24;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+a {
+    color: var(--light);
+    text-decoration: none;
+    transition: 0.2 ease-in;
+}
+
+a:hover {
+    color: var(--accent2);
+    scale: 1.02;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+    background: var(--dark);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-container,
+.nav-container {
+    width: max-content;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.mobile-menu {
+    z-index: -10;
+    width: 3vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mobile-menu:active {
+    .fa-solid.fa-bars {
+        scale: 0.95;
+    }
+}
+
+.fa-solid.fa-bars {
+
+    color: var(--light);
+}
+
+main {
+    margin-top: 10vh;
+    height: 90vh;
+    background: var(--light);
+
+}
+
+@media (max-width: 999px) {
+    .mobile-menu {
+        z-index: 1;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 60vw;
+        gap: 50px;
+        font-size: smaller;
+        background-color: var(--dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+}
+
+/* Aqui para baixo é a parte do ártigo, altere como preferir, mas mantenha o padrão!*/
+
+.title {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
