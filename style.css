@@ -17,6 +17,10 @@
     --accent2: #32CD32;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .logo {
     color: var(--light);
     font-size: 24;
