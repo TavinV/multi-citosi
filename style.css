@@ -8,6 +8,7 @@
     font-style: normal;
     font-size: large;
     transition: all 0.2s ease;
+    overflow-x: hidden;
 }
 
 :root {
@@ -23,7 +24,7 @@ body {
 
 .logo {
     color: var(--light);
-    font-size: 24;
+    font-size: 1vw;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -42,6 +43,7 @@ a:hover {
 nav {
     z-index: 10000;
     display: flex;
+    overflow-x: visible;
     justify-content: center;
     align-items: center;
     height: 8vh;
@@ -97,9 +99,6 @@ nav {
 
 main {
     padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
 
     margin-top: 8vh;
     height: 100vh;
@@ -109,6 +108,18 @@ main {
     overflow-x: hidden;
     background: var(--light);
 
+}
+
+.content {
+    width: 100vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: antiquewhite;
 }
 
 footer {
@@ -148,7 +159,7 @@ footer p {
     color: var(--accent1);
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1450px) {
  
     body {
 overflow-x: hidden
@@ -196,7 +207,9 @@ overflow-x: hidden
     }
 
     footer {
-        height: 40vh;
+        height: 50vh;
+        padding-top: 8vh;
+        overflow-y: visible;
     }
 
     .footer-refferences {
